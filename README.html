@@ -1,0 +1,26 @@
+# UpdateKubernates
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
+</head>
+<body>
+  <asciinema-player src="/308986.cast" cols="105" rows="26"></asciinema-player>
+	************************************************************************************************************************
+	*
+	* https://asciinema.org/a/qitap2VrFkFVB9BrX2qUHuwFt
+	*
+	************************************************************************************************************************
+	$ kubectl get deployments
+	$ kubectl create deployment test-web-server --image=docker.io/deniskosolapov/test-web-server:1.0
+	$ kubectl get pods
+	$ kubectl get deployments
+	$ kubectl expose deployment test-web-server  --type=LoadBalancer --port=80
+	$ kubectl get services
+	$ minikube service test-web-server
+	$ kubectl set image deployments/test-web-server test-web-server=docker.io/deniskosolapov/test-web-server:2.0
+	$ kubectl set image deployments/test-web-server test-web-server=docker.io/deniskosolapov/test-web-server:3.0
+	$ kubectl set image deployments/test-web-server test-web-server=docker.io/deniskosolapov/test-web-server:2.0
+	************************************************************************************************************************
+  <script src="/asciinema-player.js"></script>
+</body>
+</html>
