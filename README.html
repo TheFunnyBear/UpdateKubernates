@@ -6,7 +6,7 @@
 <body>
   <asciinema-player src="/308986.cast" cols="105" rows="26"></asciinema-player>
 	************************************************************************************************************************
-	*
+	* Updating Your App
 	* https://asciinema.org/a/qitap2VrFkFVB9BrX2qUHuwFt
 	*
 	************************************************************************************************************************
@@ -21,6 +21,22 @@
 	$ kubectl set image deployments/test-web-server test-web-server=docker.io/deniskosolapov/test-web-server:3.0
 	$ kubectl set image deployments/test-web-server test-web-server=docker.io/deniskosolapov/test-web-server:2.0
 	************************************************************************************************************************
+	* Scaling Your App
+	* https://asciinema.org/a/12Op9S1mytnRwBS0eFKhmL4Fe
+	*
+	************************************************************************************************************************
+	$ kubectl get pods
+	$ kubectl create deployment test-web-server --image=docker.io/paulbouwer/hello-kubernetes:1.7
+	$ kubectl expose deployment test-web-server  --type=LoadBalancer --port=8080
+	$ kubectl scale deployments/test-web-server --replicas=2
+	$ minikube service test-web-server
+	$ kubectl get pods
+	$ kubectl scale deployments/test-web-server --replicas=4
+	$ kubectl get pods
+	$ kubectl scale deployments/test-web-server --replicas=1
+	$ kubectl get pods
+
+
   <script src="/asciinema-player.js"></script>
 </body>
 </html>
